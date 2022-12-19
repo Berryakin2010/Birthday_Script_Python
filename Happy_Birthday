@@ -1,0 +1,20 @@
+import datetime
+
+# A list of dictionaries, each containing a person's name and birthday
+birthday_list = [
+    {'name': 'Alice', 'birthday': '01-01'},
+    {'name': 'Bob', 'birthday': '02-14'},
+    {'name': 'Eve', 'birthday': '03-03'}
+]
+
+# Get the current date
+today = datetime.datetime.now()
+
+# Convert the current date to a string in the format 'MM-DD'
+today_str = today.strftime('%m-%d')
+
+# Iterate through the list of birthdays
+for person in birthday_list:
+    # If the current date matches the person's birthday, say "Happy birthday"
+    if today_str == person['birthday']:
+        print(f"Happy birthday, {person['name']}!")
